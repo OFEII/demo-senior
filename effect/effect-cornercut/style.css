@@ -1,0 +1,42 @@
+div{
+    height: 4rem;
+    width: 12rem;
+    text-align: center;
+    line-height: 4rem;
+    margin: 4rem auto;
+    color: #fff;
+}
+.corner-cut1{
+    background: linear-gradient(168deg, transparent 120px,#fff 0) top left,
+    radial-gradient( circle farthest-corner at 84.6% 77.8%,  rgba(86,89,218,1) 0%, rgba(95,208,248,1) 90% );
+}
+.corner-allcut{
+    background: rgb(122, 206, 240); /*compatibility*/
+    background:
+    linear-gradient(135deg, transparent 15px, rgb(122, 206, 240) 0) top left,
+    linear-gradient(225deg, transparent 15px, rgb(122, 206, 240) 0) top right,
+    linear-gradient(45deg, transparent 15px, rgb(122, 206, 240) 0) bottom left,
+    linear-gradient(-45deg, transparent 15px, rgb(122, 206, 240) 0) bottom right;
+    /* transparent 15px 越大切角越大 */
+    /* 四切角 关系为90deg */
+    /* 切角读书以上下边为起点 默认90deg */
+    background-size: 50% 50%; /* 类设置图片尺寸 使每一渐变层只占元素的1/2 从而不覆盖transparent的角度 */
+    background-repeat: no-repeat;
+  }
+  .corner-fold{
+      background: #58a;
+      background: linear-gradient(-135deg, transparent 50%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px,
+      linear-gradient(-135deg, transparent 20px, #58a 0);
+  }
+  /*
+  知识点：
+  linear-gradient 每加一个为累加一层
+  
+  background-size: 
+  单角一层不用
+  双角 50% 100%; 
+  三角 50% 50%; （切角宽度 transparent 0）
+  全角 50% 50%;
+*/
+
+  
