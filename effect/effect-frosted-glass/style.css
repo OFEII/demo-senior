@@ -1,0 +1,41 @@
+/* 1.filter:blur与定位的位置关系 
+   2.模糊蒙版继承父级容器宽高 */
+.pub-pos{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.wrap-glass{
+    position: relative;
+    width: 325px;
+    height: 185px;
+    margin: 200px auto;
+    background: url(glass.jpg);
+    background-size: contain;
+}
+.wrap-word, .content{
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    overflow: hidden;
+    color: #fff;
+}
+    /* 这里使用同级元素解决文字容器做滤镜被覆盖的问题 */
+ .wrap-word::before{
+     content: '';
+     width: 325px;
+     height: 185px;
+     position: absolute;
+     left: -10px;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     filter: blur(10px);
+     background: url(glass.jpg) no-repeat -54px 0;
+     background-size: contain;
+ }
