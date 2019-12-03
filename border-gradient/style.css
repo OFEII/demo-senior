@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    height: 100vh;
+}
+.border-gradient{
+    border-width: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 13rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #f2f2f2;
+    background: #222;
+    border-radius: 3px;
+}
+.border-gradient::after{
+    position: absolute;
+    content: '';
+    width: 18.5rem;
+    height: 13.5rem;
+    z-index: -1;
+    background:linear-gradient(
+        60deg,
+        hsl(224, 85%, 66%),
+        hsl(269, 85%, 66%),
+        hsl(314, 85%, 66%),
+        hsl(359, 85%, 66%),
+        hsl(44, 85%, 66%),
+        hsl(89, 85%, 66%),
+        hsl(134, 85%, 66%),
+        hsl(179, 85%, 66%)
+      );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 6px;
+    animation: colorMove 6s alternate infinite;
+    filter: blur(1px);
+}
+@keyframes colorMove{
+    50%{
+        background-position: 100% 50%;
+    }
+}
