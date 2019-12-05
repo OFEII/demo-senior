@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(noise.png);
+    animation: anim .5s steps(15) infinite;
+}
+@keyframes anim{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 100% 100%;
+    }
+}
