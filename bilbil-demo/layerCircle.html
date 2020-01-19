@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layerCircle</title>
+	<style>
+		body {
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.layer {
+  bottom: 0;
+  height: 16em;
+  width: 16em;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.layer-blue,
+.layer-pink,
+.layer-green,
+.layer-orange {
+  border-radius: 50%;
+  height: 40%;
+  width: 100%;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transform-origin: center;
+}
+
+.layer-blue {
+  animation: slide 4s linear infinite, z-index 4s infinite;
+  background: linear-gradient(#80a4cb, #cce0f3);
+}
+
+.layer-pink {
+  animation: slide 4s linear 2s infinite, z-index 4s 2s infinite;
+  background: linear-gradient(#fac8cd, #bbb2d5);
+}
+
+.layer-green {
+  animation: slide 4s linear 3s infinite, z-index 4s 3s infinite;
+  background: linear-gradient(#73c088, #d8eede);
+}
+
+.layer-orange {
+  animation: slide 4s linear 1s infinite, z-index 4s 1s infinite;
+  background: linear-gradient(#feb692, #ea5455);
+}
+
+@keyframes slide {
+  0%, 100% {
+    opacity: 0;
+    top: -21%;
+    transform: scale(0);
+  }
+  5%, 95% {
+    opacity: 1;
+  }
+  10%, 90% {
+    transform: scale(0.43);
+  }
+  15%, 85% {
+    transform: scale(0.6);
+  }
+  25%, 75% {
+    transform: scale(0.83);
+  }
+  40%, 60% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1);
+  }
+  99.9% {
+    top: 80%;
+    transform: scale(0);
+  }
+}
+@keyframes z-index {
+  0% {
+    z-index: 40;
+  }
+  25% {
+    z-index: 30;
+  }
+  50% {
+    z-index: 20;
+  }
+  100% {
+    z-index: 10;
+  }
+}
+.layerColor {
+  height: 2em;
+  width: 10em;
+  /*background-color: #333;*/
+  /*border: 1px solid #000;*/
+  position: absolute;
+  bottom: 15em;
+  right: 0;
+  display: block;
+}
+
+.lc1 {
+  height: 1em;
+  width: 2em;
+  border-radius: 1px;
+  margin-top: 0.618em;
+  background: linear-gradient(#80a4cb, #cce0f3);
+}
+.lc2 {
+  height: 1em;
+  width: 2em;
+  border-radius: 1px;
+  margin-top: 0.618em;
+  background: linear-gradient(#fac8cd, #bbb2d5);
+}
+.lc3 {
+  height: 1em;
+  width: 2em;
+  border-radius: 1px;
+  margin-top: 0.618em;
+  background: linear-gradient(#73c088, #d8eede);
+}
+.lc4 {
+  height: 1em;
+  width: 2em;
+  border-radius: 1px;
+  margin-top: 0.618em;
+  background: linear-gradient(#feb692, #ea5455);
+}
+
+	</style>
+</head>
+<body>	
+	<div class="layer">
+	  <div class="layer-green"></div>
+	  <div class="layer-pink"></div>
+	  <div class="layer-orange"></div>
+	  <div class="layer-blue"></div>
+	</div>
+	<div class="layerColor">
+	  <div class="lc1"></div>
+	  <div class="lc2"></div>
+	  <div class="lc3"></div>
+	  <div class="lc4"></div>
+	</div>	
+</body>
+</html>

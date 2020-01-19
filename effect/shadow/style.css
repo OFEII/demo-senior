@@ -1,0 +1,29 @@
+div{
+    height: 5rem;
+    width: 15rem;
+    background: linear-gradient(to bottom left, #599de0 0%, #809ac2 90%);
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    display: flex;
+}
+.shadow-bottom{
+    box-shadow: 0 5px 5px rgba(11, 56, 102, .6) ;
+}
+.shadow-slide {
+    box-shadow: 5px 0 5px rgba(11, 56, 102, .6), -5px 0 5px rgba(11, 56, 102, .6)
+}
+  .shadow-right-top{
+    box-shadow: 0 -5px 5px rgba(11, 56, 102, .6),5px 0 5px rgba(11, 56, 102, .6)
+}
+.wrap{
+    border-radius: 8px;
+    box-shadow: 0 0 0 8px rgba(11, 56, 102, .6);
+    outline: 8px solid rgba(11, 56, 102, .6);
+}
+.wrap2{
+    outline: 6px solid #754906;
+
+}
+  

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.weather {
+			width: 100%;
+			font-size: calc(1em);
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-flow: row wrap;
+			background-color: #212125;
+			color: #e6e8db;
+		}
+		.snowy {
+			flex: none;
+			display: block;
+			position: relative;
+			font-size: calc(11em);
+			width: 1em;
+			height: 1em;
+			margin: .3em;
+			border-radius: 100%;
+			box-shadow: 0 0 0 0.5em currentColor inset, 0 0 0.3em -0.3em #c9e8de;
+			background: linear-gradient(to bottom left, #758595 0%, #e0e2e5 90%);
+		}
+		.sonwy ul {
+			position: absolute;
+			list-style: none;
+			top: 0%;
+			left: 10%;
+			right: 0%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.snowy li::before,
+		.snowy li::after {
+			content: "";
+			position: absolute;
+			list-style: none;
+			width: .15em;
+			height: .1em;
+			border-radius: 100%;
+			background-color: currentColor;
+			will-change: transform, opacity;
+			animation: snow 3700ms infinite ease-out;
+			opacity: 0;
+		}
+		.snowy li:nth-child(2n+1)::before,
+		.snowy li:nth-child(13n+11)::after{
+			top: -7%;
+			left: 40%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="weather">
+		<div class="snowy">
+			<span class="snowman"></span>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>		
+</body>
+</html>
